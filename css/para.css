@@ -1,0 +1,132 @@
+.apoyo {
+    background: green;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+	
+  }
+
+  #teAyudamos{
+    padding:7rem 0;
+	height: 75vh;
+  }
+
+.containerHead{
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ .containerTitle{
+
+	background-color: bisque;
+	
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    width: 45vw;
+	min-width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(0,0);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} 
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -100;
+}
+
+.parallax {
+	scroll-padding-top: 130px;
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+    opacity: 1.5;
+	filter: brightness(0.5);
+    
+
+	/* BG behaviour */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@media screen and (max-width: 900px) {
+	
+	.containerTitle{
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgb(251, 251, 251);
+		
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(20px);
+		padding: 20px;
+		width: 50vw;
+		height: auto;
+		max-width: 600px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 10px;
+		transform: translate(0, 0) scale(1.2);
+		
+	}
+    
+}
+
+@media screen and (max-width: 401px) {
+	
+	.containerTitle{
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgb(251, 251, 251);
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(15px);
+		padding: 10px;
+		width: 50vw;
+		height: auto;
+		max-width: 600px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 10px;
+		transform: translate(0, 0) scale(1.0);
+		
+	}
+    
+}
+
+
+/* Parallax con jscript
+
+Para utilziar el paralax con javascript se debe:
+1- reutilizar los estilos css de "parallax"
+2- utilizar la clase "parallax" y llamar la imagen con data-parallax-image.
+3- utilizar y llamar el script universal-parallax.min.js
+4- para que se vea la imagen se debe inicializar el script con new universal parallax como abajo del codigo
+[
+    <script>
+      new universalParallax().init({
+        speed: 4
+    });
+    </script>
+]
+
+*/
